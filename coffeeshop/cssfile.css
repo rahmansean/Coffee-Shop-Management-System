@@ -1,0 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 23, 2022, 11:25:18 PM
+    Author     : User
+*/
+
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left,#6a4320,#a17765);
+}

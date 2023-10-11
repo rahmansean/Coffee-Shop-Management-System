@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="556.0" prefWidth="727.0" style="-fx-background-color: #a17765;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeeshop.EmployeeInfoController">
+    <stylesheets>
+        <URL value="@employeeinfo.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="66.0" prefWidth="730.0" style="-fx-background-color: #704a39;">
+         <children>
+            <Pane layoutX="218.0" layoutY="7.0" prefHeight="50.0" prefWidth="426.0">
+               <children>
+                  <Label layoutX="-8.0" layoutY="5.0" prefHeight="41.0" prefWidth="434.0" text="Coffee Shop Management System" textFill="#faf5f5">
+                     <font>
+                        <Font name="Bodoni MT" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="150.0" layoutY="7.0" prefHeight="50.0" prefWidth="57.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/coffee-shop.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutX="687.0" layoutY="7.0" prefHeight="34.0" prefWidth="42.0" />
+            <Button fx:id="btnback" layoutX="661.0" layoutY="8.0" mnemonicParsing="false" onAction="#backAction" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: #704a39;">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox layoutY="66.0" prefHeight="490.0" prefWidth="258.0" style="-fx-background-color: #7a5241;">
+         <children>
+            <Pane prefHeight="164.0" prefWidth="263.0">
+               <children>
+                  <ImageView fitHeight="115.0" fitWidth="152.0" layoutX="72.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/signboard.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="242.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="223.0" fitWidth="219.0" layoutX="20.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/coffee.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <ImageView fitHeight="115.0" fitWidth="125.0" layoutX="447.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/profile.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="editProfile" layoutX="457.0" layoutY="201.0" mnemonicParsing="false" onAction="#editProfileAction" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #47362e; -fx-background-radius: 30;" text="Edit Profile" textFill="#f2ebeb">
+         <font>
+            <Font name="Bodoni MT" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="empid" layoutX="394.0" layoutY="250.0" prefHeight="26.0" prefWidth="219.0" promptText="ID" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empname" layoutX="394.0" layoutY="290.0" prefHeight="26.0" prefWidth="219.0" promptText="Name" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empmail" layoutX="394.0" layoutY="333.0" prefHeight="26.0" prefWidth="219.0" promptText="E-Mail" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empaddress" layoutX="394.0" layoutY="374.0" prefHeight="26.0" prefWidth="219.0" promptText="Address" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empphone" layoutX="394.0" layoutY="413.0" prefHeight="26.0" prefWidth="219.0" promptText="Phone" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empgender" layoutX="394.0" layoutY="451.0" prefHeight="26.0" prefWidth="219.0" promptText="Gender" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="refresh" layoutX="457.0" layoutY="493.0" mnemonicParsing="false" onAction="#refreshAction" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: #47362e; -fx-background-radius: 30;" text="Refresh" textFill="#f2ebeb">
+         <font>
+            <Font name="Bodoni MT" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

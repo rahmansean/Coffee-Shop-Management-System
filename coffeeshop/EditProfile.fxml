@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="editprofilePane" prefHeight="493.0" prefWidth="730.0" style="-fx-background-color: #a17765;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeeshop.EditProfileController">
+    <stylesheets>
+        <URL value="@employeeinfo.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="66.0" prefWidth="730.0" style="-fx-background-color: #704a39;">
+         <children>
+            <Pane layoutX="218.0" layoutY="7.0" prefHeight="50.0" prefWidth="426.0">
+               <children>
+                  <Label layoutX="-8.0" layoutY="5.0" prefHeight="41.0" prefWidth="434.0" text="Coffee Shop Management System" textFill="#faf5f5">
+                     <font>
+                        <Font name="Bodoni MT" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="150.0" layoutY="7.0" prefHeight="50.0" prefWidth="57.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/coffee-shop.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnback" layoutX="675.0" layoutY="12.0" mnemonicParsing="false" onAction="#backAction" prefHeight="33.0" prefWidth="50.0" style="-fx-background-color: #704a39;">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <VBox layoutY="66.0" prefHeight="442.0" prefWidth="190.0" style="-fx-background-color: #7a5241;">
+         <children>
+            <Pane prefHeight="164.0" prefWidth="263.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="183.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/signboard.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="242.0" prefWidth="266.0">
+               <children>
+                  <ImageView fitHeight="242.0" fitWidth="200.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/barista.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </VBox>
+      <TextField fx:id="empname" layoutX="303.0" layoutY="165.0" prefHeight="34.0" prefWidth="250.0" promptText="Name" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empmail" layoutX="303.0" layoutY="233.0" prefHeight="34.0" prefWidth="250.0" promptText="E-Mail" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empaddress" layoutX="303.0" layoutY="294.0" prefHeight="34.0" prefWidth="250.0" promptText="Address" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="empphone" layoutX="303.0" layoutY="352.0" prefHeight="34.0" prefWidth="250.0" promptText="Phone" style="-fx-background-radius: 30; -fx-background-color: #ffff;">
+         <font>
+            <Font name="Bell MT" size="15.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnsave" layoutX="378.0" layoutY="429.0" mnemonicParsing="false" onAction="#btnsave" prefHeight="33.0" prefWidth="83.0" style="-fx-background-radius: 30; -fx-background-color: #47362e;" text="SAVE" textFill="#f4f1f1">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

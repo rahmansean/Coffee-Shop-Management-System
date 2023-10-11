@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="backgroundColor" stylesheets="@cssfile.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coffeeshop.POSController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #47362e;" styleClass="backgroundColor" stylesheets="@cssfile.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="310.0" layoutY="14.0" prefHeight="55.0" prefWidth="465.0" text="Point Of Sale" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="367.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/cashier.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnback" layoutX="947.0" layoutY="27.0" mnemonicParsing="false" onAction="#backAction" prefHeight="54.0" prefWidth="67.0" style="-fx-background-color: #47362e;">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="-1.0" layoutY="177.0" prefHeight="197.0" prefWidth="350.0" style="-fx-background-color: #C4A484;" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="177.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="20.0" minHeight="0.0" prefHeight="0.0" />
+          <RowConstraints maxHeight="114.99998474121094" minHeight="10.0" prefHeight="98.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="123.33334350585938" minHeight="10.0" prefHeight="103.33332824707031" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="categorynum1" buttonType="RAISED" onAction="#contentOne" prefHeight="91.0" prefWidth="119.0" ripplerFill="#ebd38c" text="Hot Drinks" GridPane.rowIndex="1" />
+            <JFXButton fx:id="categorynum2" buttonType="RAISED" onAction="#contentTwo" prefHeight="91.0" prefWidth="117.0" ripplerFill="#ebd38c" text="Cold Coffee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXButton fx:id="categorynum3" buttonType="RAISED" onAction="#contentThree" prefHeight="90.0" prefWidth="160.0" ripplerFill="#ebd38c" text="Shakes" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXButton fx:id="categorynum4" buttonType="RAISED" onAction="#contentFour" prefHeight="81.0" prefWidth="114.0" ripplerFill="#ebd38c" text="Hot Chocolate" GridPane.rowIndex="2" />
+            <JFXButton fx:id="categorynum5" buttonType="RAISED" onAction="#contentFive" prefHeight="90.0" prefWidth="160.0" ripplerFill="#ebd38c" text="Cakes" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXButton fx:id="categorynum6" buttonType="RAISED" onAction="#contentSix" prefHeight="90.0" prefWidth="160.0" ripplerFill="#ebd38c" text="Brownies" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="orderTableview" layoutX="600.0" layoutY="100.0" prefHeight="320.0" prefWidth="392.0" style="-fx-background-color: #C19A6B;" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="100.0">
+        <columns>
+          <TableColumn fx:id="itemsname" prefWidth="102.0" text="Item Name" />
+            <TableColumn fx:id="itemprice" prefWidth="99.0" text="Price" />
+            <TableColumn fx:id="itemquantity" prefWidth="78.0" text="Quantity" />
+            <TableColumn fx:id="totalcost" prefWidth="108.66668701171875" text="Total Cost" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="347.0" layoutY="100.0" prefHeight="392.0" prefWidth="278.0" style="-fx-background-color: #C4A484;" AnchorPane.bottomAnchor="208.0" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="389.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="ItemID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="14.0" text="Item Name">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="89.0" text="Price">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="89.0" text="Quantity">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="itemname" layoutX="120.0" layoutY="40.0" prefHeight="31.0" prefWidth="158.0" />
+            <JFXTextField fx:id="itemcost" layoutX="120.0" layoutY="122.0" prefHeight="31.0" prefWidth="100.0" />
+            <JFXButton fx:id="addCart" buttonType="RAISED" layoutX="80.0" layoutY="320.0" onAction="#addcartAction" prefHeight="70.0" prefWidth="124.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e; -fx-background-radius: 10px;" text="ADD CART" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <Spinner fx:id="qtySpinner" layoutX="10.0" layoutY="122.0" prefHeight="31.0" prefWidth="95.0" />
+            <JFXTextField fx:id="itemid" layoutX="14.0" layoutY="40.0" prefHeight="31.0" prefWidth="95.0" />
+            <JFXTextField fx:id="totalitemprice" layoutX="120.0" layoutY="253.0" prefHeight="31.0" prefWidth="114.0" />
+            <Label layoutX="14.0" layoutY="261.0" text="Total Price">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font></Label>
+            <ComboBox fx:id="paymentMethodID" layoutX="63.0" layoutY="183.0" prefHeight="31.0" prefWidth="150.0" promptText="Choose PaymentMethod" />
+         </children></AnchorPane>
+      <AnchorPane layoutY="454.0" prefHeight="209.0" prefWidth="624.0" style="-fx-background-color: #C19A6B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="total" layoutX="118.0" layoutY="27.0" prefHeight="38.0" prefWidth="139.0">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="33.0" layoutY="40.0" prefHeight="30.0" prefWidth="100.0" text="Total ">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="discountp" layoutX="118.0" layoutY="70.0" prefHeight="38.0" prefWidth="139.0">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="33.0" layoutY="88.0" prefHeight="30.0" prefWidth="100.0" text="Discount">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="subtotalCost" layoutX="118.0" layoutY="114.0" prefHeight="38.0" prefWidth="122.0">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="33.0" layoutY="129.0" prefHeight="30.0" prefWidth="100.0" text="Sub Total">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="385.0" layoutY="84.0" prefWidth="180.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e; -fx-background-radius: 10px;" text="Cancel Order" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="385.0" layoutY="141.0" prefWidth="180.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e; -fx-background-radius: 10px;" text="Receipt " textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="deleteitem" buttonType="RAISED" layoutX="385.0" layoutY="26.0" onAction="#deleteItemAction" prefWidth="180.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e; -fx-background-radius: 10px;" text="Delete Item" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="624.0" layoutY="420.0" prefHeight="284.0" prefWidth="392.0" style="-fx-background-color: #C4A484;" AnchorPane.bottomAnchor="-4.0" AnchorPane.rightAnchor="-2.0">
+         <children>
+            <JFXTextField fx:id="customername" layoutX="182.0" layoutY="68.0" />
+            <Label layoutX="47.0" layoutY="68.0" prefHeight="30.0" prefWidth="100.0" text="Name">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="customerphone" layoutX="182.0" layoutY="112.0" />
+            <Label layoutX="47.0" layoutY="108.0" prefHeight="30.0" prefWidth="139.0" text="Phone Number">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="101.0" layoutY="7.0" prefHeight="53.0" prefWidth="200.0" text="Customer Information">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="160.0" text="Receive Time">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font></Label>
+            <Label fx:id="delivertime" layoutX="191.0" layoutY="160.0" prefHeight="21.0" prefWidth="122.0" />
+            <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="134.0" layoutY="218.0" onAction="#SaveAction" prefHeight="45.0" prefWidth="124.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e;" text="Save" textFill="WHITE" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="218.0">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      
+      <Label layoutX="36.0" layoutY="110.0" text="Order ID:">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font></Label>
+      <TextField fx:id="ordid" layoutX="167.0" layoutY="106.0" prefHeight="30.0" prefWidth="112.0" />
+      <JFXComboBox fx:id="combobox" layoutX="147.0" layoutY="392.0" prefHeight="38.0" prefWidth="139.0" unFocusColor="WHITE" />
+      <JFXButton fx:id="searchitem" buttonType="RAISED" layoutX="164.0" layoutY="448.0" onAction="#searchItemAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#ebd38c" style="-fx-background-color: #47362e; -fx-background-radius: 10px;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Franklin Gothic Medium" size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="30.0" layoutY="392.0" prefHeight="38.0" prefWidth="92.0" text="ItemName:">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font></Label>
+      <Label layoutX="36.0" layoutY="145.0" text="Order Date:">
+         <font>
+            <Font name="Franklin Gothic Medium" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="orderdate" layoutX="167.0" layoutY="140.0" prefHeight="30.0" prefWidth="112.0" textFill="WHITE" />
+   </children>
+</AnchorPane>

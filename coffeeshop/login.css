@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.left-side-background{
+    -fx-background-color: #a17765;
+}
+
+.border{
+    -fx-border-color: #4a342a;
+    -fx-border-width: 2;
+}
+
+.right-side-border{
+    -fx-border-color: #4a342a;
+    -fx-border-width: 0 2 0 0;
+}

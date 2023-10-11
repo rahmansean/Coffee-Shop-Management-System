@@ -1,9 +1,13 @@
-# Coffee-Shop-Management-System
+# CoffeeShop-ISD Project
 
 This project is based on point of sale concept to maintain orders and manage a particular coffee shop. 
 
-The primary objective of this project is to digitize coffee shop transactions and order management, simplifying the process for employees and customers. Our user-friendly interface aims to place orders easily to reduce service time. 
-We aspire to gather sales, customer, and employee data, offering special discounts to loyal customers. Daily transaction details are stored in the database for admin review.
+The primary objective of this project is to digitize coffee shop transactions and order management, simplifying the process for employees and customers. The user-friendly interface helps employees to take orders easily, reducing service time.
+Furthermore, the system stores daily transaction details and inventory information in the database for admin review. 
 
 Key tools and technologies utilized include:
 JavaFX, Scene Builder, NetBeans IDE, and Microsoft SQL Server Management Studio.
+
+
+
+
